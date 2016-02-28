@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+	<meta charset="utf-8">
+	<title>Angular Phone Shop</title>
+	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+</head>
+<body>
+
+	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a href="/app" class="navbar-brand phone-shop">Phone Shop</a>
+			</div>
+			<!-- Collection of nav links and other content for toggling -->
+			<div id="navbarCollapse" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#/phones">Home</a></li>
+					<li><a href="#">Todays Deals</a></li>
+					<li><a href="#">Gift Cards</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right" ng-controller="HeaderCtrl">
+					<li><a href="#/cart">
+						<i class="fa fa-shopping-cart"></i> Cart  <span class="badge cart-badge">{{cartItems.length}}</span></a>
+					</li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div ng-view></div>
+
+</body>
+</html>
